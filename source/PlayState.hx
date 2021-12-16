@@ -646,9 +646,6 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gfGroup);
-	case 'place': //Week 7
-				var place:BGSprite = new BGSprite('place', -600, -300, 0.9, 0.9);
-				add(place);
 
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
