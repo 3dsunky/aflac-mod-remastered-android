@@ -204,9 +204,7 @@ class TitleState extends MusicBeatState
 		{
 		    bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
 			bg.frames = Paths.getSparrowAtlas('titlescreenSunset');
-		}
-		else
-		{
+			if(!FlxG.save.data.titlescreenDayEasterEgg || !easterEggEnabled) {
 		     bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
 			bg.frames = Paths.getSparrowAtlas('titlescreenDay');
 			}
