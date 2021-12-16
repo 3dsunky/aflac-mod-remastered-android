@@ -151,10 +151,7 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
-	var titlescreenNight:BGSprite;
-	var titlescreenEnd:BGSprite;
-	var titlescreenSunset:BGSprite;
-	var titlescreenDay:BGSprite;
+	var bg:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
@@ -198,63 +195,27 @@ class TitleState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		add(titlescreenEnd);
-
-
-
-				titlescreenEnd = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
-
-				titlescreenEnd.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
-
-				titlescreenEnd.alpha = 0;
-
-				titlescreenEnd.blend = ADD;
-				}
-      else
-                {
-                add(titlescreenNight);
-
-
-
-				titlescreenNight = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
-
-				titlescreenNight.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
-
-				titlescreenNight.alpha = 0;
-
-				titlescreenNight.blend = ADD;
-			    }
+		add(bg);
+		if(!FlxG.save.data.titlescreenEndEasterEgg || !easterEggEnabled) {
+        bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
+			bg.frames = Paths.getSparrowAtlas('titlescreenEnd');
+		}
+		else
+		{
+		    bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
+			bg.frames = Paths.getSparrowAtlas('titlescreenSunset');
+		}
+		else
+		{
+		     bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
+			bg.frames = Paths.getSparrowAtlas('titlescreenDay');
+			}
 			else
 			{
-			add(titlescreenSunset);
-
-
-
-				titlescreenSunset = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
-
-				titlescreenSunset.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
-
-				titlescreenSunset.alpha = 0;
-				
-				titlescreenSunset.blend = ADD;
-				}
-				else
-				{
-				
-add(titlescreenDay);
-
-
-
-				titlescreenDay = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
-
-				titlescreenDay.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
-
-				titlescreenDay.alpha = 0;
-				
-				titlescreenDay.blend = ADD;
-
-  
-        
+			    bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
+			bg.frames = Paths.getSparrowAtlas('titlescreenNight');
+			}
+			
 		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
@@ -280,6 +241,8 @@ add(titlescreenDay);
 		}
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 		add(gfDance);
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bg);
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
