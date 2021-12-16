@@ -147,12 +147,6 @@ class MainMenuState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 		trace('Giving achievement "friday_night_play"');
 	}
-	// Unlocks "Freaky on a Friday Night" achievement
-	function giveAchievement() {
-		add(new AchievementObject('gamejolt_log_in', camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "gamejolt_log_in"');
-	}
 	#end
 
 	var selectedSomethin:Bool = false;
