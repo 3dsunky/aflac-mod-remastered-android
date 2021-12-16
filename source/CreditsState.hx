@@ -46,7 +46,18 @@ class CreditsState extends MusicBeatState
 		add(grpOptions);
 
 		var pisspoop = [ //Name - Icon name - Description - Link - BG Color
-			['Psych Engine Android Port'],
+			['Aflac FNF android Port'],
+			['Trolled guy',               'tolledguy',             'i did eveything.',                  'https://youtube.com/channel/UCwUIJBzMKa9h_tzXDx81L2A',            '0xFFFFFFFF'],
+			['Vs Aflac'],
+			['aflac',                          'aflac',                     'Main Programmer',    'https://youtube.com/c/aflacc',        '0xFF0066ff'],
+			['vr core',                          'none',                     'Artist',    'https://youtu.be/dQw4w9WgXcQ',         '0xFFff0000'],
+			['DenoWasTaken',                          'what',                     'ComPoser,'    'https://youtube.com/channel/UCLfQIrHUIhDbbSqcaR1_lQA',         '0xFFffffff'],
+			['Whippy Orc',                          'gabe',                     'Charter (ty gade)',    'https://youtube.com/c/WhippyOrc',         '0xFFff0000'],
+			['bonk,                          'bonk',                    'Aflac redesign',  'https://youtube.com/c/WhippyOrc',         '0xFF8000ff'],
+			['kofv,                          'kofv',                    'Background redesign,  'https://youtu.be/dQw4w9WgXcQ',         '0xFFff9933'],
+			['dave,                          'dave',                    'what...?',  'https://youtu.be/dQw4w9WgXcQ',         '0xFFffcc66'],
+			['DISCORD,                          'discord',                    'join the funny server!!!',  'https://discord.com/invite/ouchandaflac',         '0xFF9933ff'],
+            ['Psych Engine Android Port'],
 			['M.A. Jigsaw',		    'majigsaw',		    'Main Coder of The Port',	 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ',	'0xFFC30085'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	'0xFFFFDD33'],
