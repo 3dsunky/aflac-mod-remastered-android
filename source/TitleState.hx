@@ -195,24 +195,47 @@ class TitleState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		add(bg);
+		if(!ClientPrefs.lowQuality) {
 		if(!FlxG.save.data.titlescreenEndEasterEgg || !easterEggEnabled) {
-        bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
-			bg.frames = Paths.getSparrowAtlas('titlescreenEnd');
-		}
-		else
-		{
-		    bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
-			bg.frames = Paths.getSparrowAtlas('titlescreenSunset');
-			if(!FlxG.save.data.titlescreenDayEasterEgg || !easterEggEnabled) {
-		     bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
-			bg.frames = Paths.getSparrowAtlas('titlescreenDay');
-			}
+		
+   var titlescreenNight:BGSprite = new BGSprite('titlescreenNight', 0, 0, 0, 0);
+
+					titlescreenNight.setGraphicSize(Std.int(titlescreenNight.width * 0));
+
+					titlescreenNight.updateHitbox();
+
+					add(titlescreenNight);
+}
+else
+{
+var titlescreenDay:BGSprite = new BGSprite('titlescreenDay', 0, 0, 0, 0);
+
+					titlescreenDay.setGraphicSize(Std.int(titlescreenDay.width * 0));
+
+					titlescreenDay.updateHitbox();
+
+					add(titlescreenDay);
+}
+else
+{
+var titlescreenEnd:BGSprite = new BGSprite('titlescreenEnd', 0, 0, 0, 0);
+
+					titlescreenEnd.setGraphicSize(Std.int(titlescreenEnd.width * 0));
+
+					titlescreenEnd.updateHitbox();
+
+					add(titlescreenEnd);
+}
 			else
 			{
-			    bg = new FlxSprite(FlxG.width * 0, FlxG.height * 0);
-			bg.frames = Paths.getSparrowAtlas('titlescreenNight');
-			}
+var titlescreenSunset:BGSprite = new BGSprite('titlescreenSunset', 0, 0, 0, 0);
+
+					titlescreenSunset.setGraphicSize(Std.int(titlescreenSunset.width * 0));
+
+					titlescreenSunset.updateHitbox();
+
+					add(titlescreenSunset);
+			
 			
 		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
