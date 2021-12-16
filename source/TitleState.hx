@@ -196,7 +196,7 @@ class TitleState extends MusicBeatState
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		if(!ClientPrefs.lowQuality) {
-		if(!FlxG.save.data.titlescreenEndEasterEgg || !easterEggEnabled) {
+		if(!FlxG.save.data.titlescreenEndEasterEgg || FlxG.save.data.titlescreenSunsetEasterEgg || FlxG.save.data.titlescreenDayEasterEgg || !easterEggEnabled) {
 		
    var titlescreenNight:BGSprite = new BGSprite('titlescreenNight', 0, 0, 0, 0);
 
