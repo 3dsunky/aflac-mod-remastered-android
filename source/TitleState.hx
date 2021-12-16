@@ -198,9 +198,64 @@ class TitleState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		add(bg);
+		add(titlescreenEnd);
 
-		logoBl = new FlxSprite(-150, -100);
+
+
+				titlescreenEnd = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
+
+				titlescreenEnd.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
+
+				titlescreenEnd.alpha = 0;
+
+				titlescreenEnd.blend = ADD;
+				}
+      else
+                {
+                add(titlescreenNight);
+
+
+
+				titlescreenNight = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
+
+				titlescreenNight.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
+
+				titlescreenNight.alpha = 0;
+
+				titlescreenNight.blend = ADD;
+			    }
+			else
+			{
+			add(titlescreenSunset);
+
+
+
+				titlescreenSunset = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
+
+				titlescreenSunset.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
+
+				titlescreenSunset.alpha = 0;
+				
+				titlescreenSunset.blend = ADD;
+				}
+				else
+				{
+				
+add(titlescreenDay);
+
+
+
+				titlescreenDay = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
+
+				titlescreenDay.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
+
+				titlescreenDay.alpha = 0;
+				
+				titlescreenDay.blend = ADD;
+
+  
+        
+		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
@@ -211,14 +266,14 @@ class TitleState extends MusicBeatState
 
 		swagShader = new ColorSwap();
 		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
-			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-			gfDance.frames = Paths.getSparrowAtlas('loafDanceTitle');
+			gfDance = new FlxSprite(FlxG.width * -0.4, FlxG.height * -0.07);
+			gfDance.frames = Paths.getSparrowAtlas('loafAwakeTitle');
 			gfDance.animation.addByIndices('danceLeft', 'loaftitle', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 			gfDance.animation.addByIndices('danceRight', 'loaftitle', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		}
 		else //Psyka easter egg
 		{
-			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.04);
+			gfDance = new FlxSprite(FlxG.width * -0.4, FlxG.height * -0.04);
 			gfDance.frames = Paths.getSparrowAtlas('loafSnoozeTitle');
 			gfDance.animation.addByIndices('danceLeft', 'loaff', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 			gfDance.animation.addByIndices('danceRight', 'loaff', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
