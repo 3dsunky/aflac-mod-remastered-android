@@ -226,28 +226,6 @@ class TitleState extends MusicBeatState
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
-		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
-		logoBl = new FlxSprite(250, 150);
-		logoBl.frames = Paths.getSparrowAtlas('titlescreenSunset');
-		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		}
-		else
-		{
-		logoBl = new FlxSprite(250, 150);
-		logoBl.frames = Paths.getSparrowAtlas('titlescreenDay');
-		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
-		logoBl = new FlxSprite(250, 150);
-		logoBl.frames = Paths.getSparrowAtlas('titlescreenNight');
-		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		}
-		else
-		{
-		logoBl = new FlxSprite(250, 150);
-		logoBl.frames = Paths.getSparrowAtlas('titlescreenEnd');
-		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		}
-	}
 		
         
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
