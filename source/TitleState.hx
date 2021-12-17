@@ -195,47 +195,7 @@ class TitleState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		if(!ClientPrefs.lowQuality) {
-		if(!FlxG.save.data.titlescreenEndEasterEgg || FlxG.save.data.titlescreenSunsetEasterEgg || FlxG.save.data.titlescreenDayEasterEgg || !easterEggEnabled) {
 		
-   var titlescreenNight:BGSprite = new BGSprite('titlescreenNight', 0, 0, 0, 0);
-
-					titlescreenNight.setGraphicSize(Std.int(titlescreenNight.width * 0));
-
-					titlescreenNight.updateHitbox();
-
-					add(titlescreenNight);
-}
-else
-{
-var titlescreenDay:BGSprite = new BGSprite('titlescreenDay', 0, 0, 0, 0);
-
-					titlescreenDay.setGraphicSize(Std.int(titlescreenDay.width * 0));
-
-					titlescreenDay.updateHitbox();
-
-					add(titlescreenDay);
-}
-else
-{
-var titlescreenEnd:BGSprite = new BGSprite('titlescreenEnd', 0, 0, 0, 0);
-
-					titlescreenEnd.setGraphicSize(Std.int(titlescreenEnd.width * 0));
-
-					titlescreenEnd.updateHitbox();
-
-					add(titlescreenEnd);
-}
-			else
-			{
-var titlescreenSunset:BGSprite = new BGSprite('titlescreenSunset', 0, 0, 0, 0);
-
-					titlescreenSunset.setGraphicSize(Std.int(titlescreenSunset.width * 0));
-
-					titlescreenSunset.updateHitbox();
-
-					add(titlescreenSunset);
-			
 			
 		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -262,12 +222,33 @@ var titlescreenSunset:BGSprite = new BGSprite('titlescreenSunset', 0, 0, 0, 0);
 		}
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 		add(gfDance);
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
-
+		
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenSunset'));
+		bg.screenCenter();
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		} else {
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenNight'));
+		bg.screenCenter();
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		} else {
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenDay'));
+		bg.screenCenter();
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		} else {
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenEnd'));
+		bg.screenCenter();
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		}
+		add(bg);
+		bg.visible = true;
+		bg.setGraphicSize(Std.int(logoSpr.width * 0));
+		bg.updateHitbox();
+		//bg.screenCenter(X);
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
+        
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
