@@ -6,3 +6,9 @@ mall
 mallEvil
 school
 schoolEvil
+buff
+end
+dave
+overworldA
+overworldB
+overworldC
