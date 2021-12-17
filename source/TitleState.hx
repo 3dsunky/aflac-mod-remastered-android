@@ -236,9 +236,7 @@ class TitleState extends MusicBeatState
 		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('titlescreenDay');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		}
-		else
-		{
+		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
 		logoBl = new FlxSprite(250, 150);
 		logoBl.frames = Paths.getSparrowAtlas('titlescreenNight');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
