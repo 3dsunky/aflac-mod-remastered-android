@@ -203,6 +203,7 @@ class TitleState extends MusicBeatState
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
+		
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
@@ -225,29 +226,31 @@ class TitleState extends MusicBeatState
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
-		
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenSunset'));
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing);
-		} else {
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenNight'));
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing);
-		} else {
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenDay'));
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing);
-		} else {
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenEnd'));
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing);
+		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
+		logoBl = new FlxSprite(250, 150);
+		logoBl.frames = Paths.getSparrowAtlas('titlescreenSunset');
+		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		}
-		add(bg);
-		bg.visible = true;
-		bg.setGraphicSize(Std.int(logoSpr.width * 0));
-		bg.updateHitbox();
-		//bg.screenCenter(X);
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		else
+		{
+		logoBl = new FlxSprite(250, 150);
+		logoBl.frames = Paths.getSparrowAtlas('titlescreenDay');
+		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
+		}
+		else
+		{
+		logoBl = new FlxSprite(250, 150);
+		logoBl.frames = Paths.getSparrowAtlas('titlescreenNight');
+		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
+		}
+		else
+		{
+		logoBl = new FlxSprite(250, 150);
+		logoBl.frames = Paths.getSparrowAtlas('titlescreenEnd');
+		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
+		}
+	}
+		
         
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
