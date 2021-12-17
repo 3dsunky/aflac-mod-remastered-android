@@ -228,19 +228,19 @@ class TitleState extends MusicBeatState
 		
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenSunset'));
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.antialiasing = ClientPrefs.globalAntialiasing);
 		} else {
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenNight'));
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.antialiasing = ClientPrefs.globalAntialiasing);
 		} else {
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenDay'));
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.antialiasing = ClientPrefs.globalAntialiasing);
 		} else {
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titlescreenEnd'));
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.antialiasing = ClientPrefs.globalAntialiasing);
 		}
 		add(bg);
 		bg.visible = true;
