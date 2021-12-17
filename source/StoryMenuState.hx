@@ -142,8 +142,8 @@ class StoryMenuState extends MusicBeatState
 
 		
 		for (i in 0...CoolUtil.difficultyStuff.length) {
-			var sprDifficulty:FlxSprite = new FlxSprite(leftArrow.x + 400, leftArrow.y).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
-			sprDifficulty.x += (400 - sprDifficulty.width) / 2;
+			var sprDifficulty:FlxSprite = new FlxSprite(leftArrow.x + 50, leftArrow.y).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
+			sprDifficulty.x += (50 + sprDifficulty.width) / 2;
 			sprDifficulty.ID = i;
 			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 			sprDifficultyGroup.add(sprDifficulty);
@@ -152,7 +152,7 @@ class StoryMenuState extends MusicBeatState
 
 		difficultySelectors.add(sprDifficultyGroup);
 
-		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
+		rightArrow = new FlxSprite(leftArrow.x + 45, leftArrow.y);
 		rightArrow.frames = ui_tex;
 		rightArrow.animation.addByPrefix('idle', 'arrow right');
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
@@ -322,8 +322,8 @@ class StoryMenuState extends MusicBeatState
 			if(curDifficulty == spr.ID) {
 				spr.visible = true;
 				spr.alpha = 0;
-				spr.y = leftArrow.y - 15;
-				FlxTween.tween(spr, {y: leftArrow.y + 15, alpha: 1}, 0.07);
+				spr.y = leftArrow.y + 50;
+				FlxTween.tween(spr, {y: leftArrow.y + 50, alpha: 1}, 0.07);
 			}
 		});
 
