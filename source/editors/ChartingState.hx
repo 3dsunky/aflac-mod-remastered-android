@@ -80,7 +80,9 @@ class ChartingState extends MusicBeatState
 		['Camera Follow Pos', "Value 1: X\nValue 2: Y\n\nThe camera won't change the follow point\nafter using this, for getting it back\nto normal, leave both values blank."],
 		['Alt Idle Animation', "Sets a speciied suffix after the idle animation name.\nYou can use this to trigger 'idle-alt' if you set\nValue 2 to -alt\n\nValue 1: Character to set (Dad, BF or GF)\nValue 2: New suffix (Leave it blank to disable)"],
 		['Screen Shake', "Value 1: Camera shake\nValue 2: HUD shake\n\nEvery value works as the following example: \"1, 0.05\".\nThe first number (1) is the duration.\nThe second number (0.05) is the intensity."],
-		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"]
+		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
+		['Dave really just goes to you', "Value 1: specifies the sound 0/none = Vine boom | 1 = You Suck | 2 = fard 3 = Taco Bell DO NOT USE ANY HIGHER THAN WHATS LISTED OR THERE WILL BE CRASHING!!\nValue 2: nothing"],
+		['neo attack', "Value 1: Damage\nValue 2: nothing lol"]
 	];
 
 	var _file:FileReference;
