@@ -693,7 +693,7 @@ class PlayState extends MusicBeatState
 				case 'chorus' | 'pillars':
 
 					curStage = 'buff';
-				case 'trance';
+				case 'trance':
 				    
 				    curStage = 'stage';
 
