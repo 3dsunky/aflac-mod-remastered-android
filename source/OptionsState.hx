@@ -754,7 +754,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Flashing Lights',
 		'Camera Zooms',
 		'FPS Counter',
-		'Play Cutscene On Freeplay'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -947,8 +946,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 					
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
-					case 'Play Cutscene On Freeplay':
-					ClientPrefs.isFreeplay = !ClientPrefs.seenCutscene;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -998,7 +995,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			}
 		}
 
-		if(showCharacter != null && showCharacter.animation.curAnim.finished) {
+		if(showCharacter != null && showCharacter.animation.curAnim.fin hed) {
 			showCharacter.dance();
 		}
 
@@ -1058,8 +1055,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, hides most HUD elements.";
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
-			case 'Play Cutscene On Freeplay':
-				daText = "If checked, Play Cutscenes on Freeplay";
 		}
 		descText.text = daText;
 
@@ -1133,11 +1128,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Persistent Cached Data':
 						daValue = ClientPrefs.imagesPersist;
 					case 'Hide Song Length':
-						daValue = ClientPrefs.hideTime;
-					case 'Play Cutscene On Freeplay':
-						daValue = ClientPrefs.Cutscene;
-					case 'Play Cutscene On Freeplay':
-						daValue = ClientPrefs.Freeplay;
 				}
 				checkbox.daValue = daValue;
 			}
