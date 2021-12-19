@@ -42,7 +42,7 @@ class FlxVirtualPad extends FlxSpriteGroup
 		if (DPad == null)
 			DPad = FULL;
 		if (Action == null)
-			Action = A_B_C;
+			Action = A_B_C_X;
 
 		dPad = new FlxSpriteGroup();
 		dPad.scrollFactor.set();
@@ -81,6 +81,8 @@ class FlxVirtualPad extends FlxSpriteGroup
 				actions.add(add(buttonA = createButton(FlxG.width - 44 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "a")));
                         case B:
 				actions.add(add(buttonB = createButton(FlxG.width - 44 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "b")));
+				          case X:
+				actions.add(add(buttonX = createButton(FlxG.width - 44 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "x")));
 			case A_B:
 				actions.add(add(buttonA = createButton(FlxG.width - 44 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "a")));
 				actions.add(add(buttonB = createButton(FlxG.width - 86 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "b")));
@@ -128,6 +130,8 @@ class FlxVirtualPad extends FlxSpriteGroup
 		button.solid = false;
 		button.immovable = true;
 		button.scrollFactor.set();
+		
+		if(daSong == 'the-end') actions.add(add(buttonX = createButton(FlxG.width - 44 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "x")));
 
 		#if FLX_DEBUG
 		button.ignoreDrawDebug = true;
@@ -170,6 +174,7 @@ enum FlxActionMode
 	NONE;
 	A;
         B;
+        X;
 	A_B;
 	A_B_C;
 	A_B_X_Y;
