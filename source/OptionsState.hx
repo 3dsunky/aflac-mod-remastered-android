@@ -948,7 +948,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
 					case 'Play Cutscene On Freeplay':
-					ClientPrefs.isFreeplay = !ClientPrefs.seenCutscene
+					ClientPrefs.isFreeplay = !ClientPrefs.seenCutscene;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
