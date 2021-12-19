@@ -2096,13 +2096,13 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 
 					schoolIntro(doof);
-				case: 'loaf':
+				case 'loaf':
 				   videoIntro('loafcutscene');
-				case: 'blazeborn':
+				case 'blazeborn':
 				   videoIntro('blazborn');
-				case: 'the-end':
+				case 'the-end':
 				   videoIntro('theendcutscene');
-				case: 'crisis':
+				case 'crisis':
 				   videoIntro('baldi');
 
 				default:
