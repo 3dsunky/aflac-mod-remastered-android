@@ -2097,13 +2097,13 @@ class PlayState extends MusicBeatState
 
 					schoolIntro(doof);
 				case 'loaf':
-				   videoIntro('loafcutscene');
+				   startVideo('loafcutscene');
 				case 'blazeborn':
-				   videoIntro('blazborn');
+				   startVideo('blazborn');
 				case 'the-end':
-				   videoIntro('theendcutscene');
+				   startVideo('theendcutscene');
 				case 'crisis':
-				   videoIntro('baldi');
+				   startVideo('baldi');
 
 				default:
 
