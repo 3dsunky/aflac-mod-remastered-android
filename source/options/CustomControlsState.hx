@@ -32,7 +32,6 @@ class CustomControlsState extends MusicBeatSubstate
 	var down_text:FlxText;
 	var left_text:FlxText;
 	var right_text:FlxText;
-	var b_text:FlxText;
 
 	var inputvari:FlxText;
 
@@ -90,6 +89,7 @@ class CustomControlsState extends MusicBeatSubstate
 		down_text = new FlxText(200, 250, 0,"Button down x:" + _pad.buttonDown.x +" y:" + _pad.buttonDown.y, 24);
 		left_text = new FlxText(200, 300, 0,"Button left x:" + _pad.buttonLeft.x +" y:" + _pad.buttonLeft.y, 24);
 		right_text = new FlxText(200, 350, 0,"Button right x:" + _pad.buttonRight.x +" y:" + _pad.buttonRight.y, 24);
+		
 		//hitboxes
 
 		_hb = new Hitbox();
@@ -139,7 +139,6 @@ class CustomControlsState extends MusicBeatSubstate
 		add(down_text);
 		add(left_text);
 		add(right_text);
-		add(b_text);
 
 		// change selection
 		changeSelection();
@@ -309,6 +308,7 @@ class CustomControlsState extends MusicBeatSubstate
 		down_text.text = "Button down x:" + _pad.buttonDown.x +" y:" + _pad.buttonDown.y;
 		left_text.text = "Button left x:" + _pad.buttonLeft.x +" y:" + _pad.buttonLeft.y;
 		right_text.text = "Button right x:" + _pad.buttonRight.x +" y:" + _pad.buttonRight.y;
+	}
 
 	function SpamCheck(){
 	    if (_pad.buttonUp.x == _pad.buttonDown.x && _pad.buttonUp.y == _pad.buttonDown.y){//up Down check
