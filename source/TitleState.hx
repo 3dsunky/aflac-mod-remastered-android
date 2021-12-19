@@ -151,7 +151,6 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
-	var bg:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
@@ -195,28 +194,27 @@ class TitleState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		
-			
-		logoBl = new FlxSprite(250, 150);
+		add(bg);
+
+		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
-		
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
 		swagShader = new ColorSwap();
 		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
-			gfDance = new FlxSprite(FlxG.width * -0.4, FlxG.height * -0.07);
+			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 			gfDance.frames = Paths.getSparrowAtlas('loafAwakeTitle');
 			gfDance.animation.addByIndices('danceLeft', 'loaftitle', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 			gfDance.animation.addByIndices('danceRight', 'loaftitle', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		}
 		else //Psyka easter egg
 		{
-			gfDance = new FlxSprite(FlxG.width * -0.4, FlxG.height * -0.04);
+			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.04);
 			gfDance.frames = Paths.getSparrowAtlas('loafSnoozeTitle');
 			gfDance.animation.addByIndices('danceLeft', 'loaff', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 			gfDance.animation.addByIndices('danceRight', 'loaff', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
@@ -226,17 +224,6 @@ class TitleState extends MusicBeatState
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		//logoBl.shader = swagShader.shader;
-		
-        
-		titleText = new FlxSprite(100, FlxG.height * 0.8);
-		titleText.frames = Paths.getSparrowAtlas('titleEnter');
-		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
-		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
-		titleText.antialiasing = ClientPrefs.globalAntialiasing;
-		titleText.animation.play('idle');
-		titleText.updateHitbox();
-		// titleText.screenCenter(X);
-		add(titleText);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
