@@ -692,7 +692,7 @@ class PlayState extends MusicBeatState
 					
 				case 'chorus' | 'pillars':
 
-					curStage = 'buff';
+					curStage = 'end';
 				case 'trance':
 				    
 				    curStage = 'stage';
@@ -8051,7 +8051,7 @@ class PlayState extends MusicBeatState
 
 						}
 
-					case 'The Ultimate Showdown':
+					case 'The j Showdown':
 
 						if(Paths.formatToSongPath(SONG.song) == 'copycat' && !usedPractice) {
 
