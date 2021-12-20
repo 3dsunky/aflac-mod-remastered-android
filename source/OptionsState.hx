@@ -753,7 +753,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide Song Length',
 		'Flashing Lights',
 		'Camera Zooms',
-		'FPS Counter',
+		'FPS Counter'
+
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -995,7 +996,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			}
 		}
 
-		if(showCharacter != null && showCharacter.animation.curAnim.fin hed) {
+		if(showCharacter != null && showCharacter.animation.curAnim.finished) {
 			showCharacter.dance();
 		}
 
@@ -1128,6 +1129,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Persistent Cached Data':
 						daValue = ClientPrefs.imagesPersist;
 					case 'Hide Song Length':
+						daValue = ClientPrefs.hideTime;
 				}
 				checkbox.daValue = daValue;
 			}
