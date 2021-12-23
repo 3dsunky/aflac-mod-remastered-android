@@ -8087,6 +8087,7 @@ class PlayState extends MusicBeatState
 			}
 
 		}
+		}
 
 		return null;
 
