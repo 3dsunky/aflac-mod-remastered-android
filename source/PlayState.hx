@@ -8063,9 +8063,10 @@ class PlayState extends MusicBeatState
 						if(Paths.formatToSongPath(SONG.song) == 'copy-cat' && !usedPractice) {
 
 							unlock = true;
+							}
 							
 					case 'Not today, thank you!':
-						if(!boyfriend.animation.getByName('swordHit') >= 0 && !usedPractice) {
+						if(!boyfriend.animation.getByName('swordHit') == 0 && !usedPractice) {
 							unlock = true;
 						}
 
