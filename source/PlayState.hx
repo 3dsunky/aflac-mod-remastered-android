@@ -1934,7 +1934,7 @@ class PlayState extends MusicBeatState
 		#end		
         #if mobileC
         if (SONG.song == 'the-end')
-		addVirtualPad(B);
+		addVirtualPad(FULL, X);
 	#end
        
        
@@ -2104,13 +2104,13 @@ class PlayState extends MusicBeatState
 
 					schoolIntro(doof);
 				case 'loaf':
-				   startVideo('loafcutscene');
+				   startVideo('videos/loafcutscene');
 				case 'blazeborn':
-				   startVideo('blazborn');
+				   startVideo('videos/blazborn');
 				case 'the-end':
-				   startVideo('theendcutscene');
+				   startVideo('videos/theendcutscene');
 				case 'crisis':
-				   startVideo('baldi');
+				   startVideo('videos/baldi');
 
 				default:
 
@@ -8058,11 +8058,16 @@ class PlayState extends MusicBeatState
 
 						}
 
-					case 'The j Showdown':
+					case 'The Ultimate Showdown':
 
-						if(Paths.formatToSongPath(SONG.song) == 'copycat' && !usedPractice) {
+						if(Paths.formatToSongPath(SONG.song) == 'copy-cat' && !usedPractice) {
 
 							unlock = true;
+							
+					case 'Not today, thank you!':
+						if(!boyfriend.animation.getByName('swordHit') >= 0 && !usedPractice) {
+							unlock = true;
+						}
 
 						}
 
