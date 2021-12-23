@@ -8073,6 +8073,7 @@ class PlayState extends MusicBeatState
 						}
 
 				}
+			}
 
 
 
@@ -8086,7 +8087,6 @@ class PlayState extends MusicBeatState
 
 			}
 
-		}
 		}
 
 		return null;
