@@ -1932,7 +1932,14 @@ class PlayState extends MusicBeatState
 			add(mcontrols);
 
 		#end		
-
+        #if mobileC
+        if (SONG.song == 'the-end')
+		addVirtualPad(B);
+	#end
+       
+       
+       
+       
 
 
 		// if (SONG.song == 'South')
