@@ -8070,10 +8070,7 @@ class PlayState extends MusicBeatState
 							unlock = true;
 						}
 
-						}
-
 				}
-			}
 
 
 
