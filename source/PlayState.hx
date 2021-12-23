@@ -8066,7 +8066,7 @@ class PlayState extends MusicBeatState
 							}
 							
 					case 'Not today, thank you!':
-						if(!boyfriend.animation.getByName('swordHit') == 0 && !usedPractice) {
+						if(!boyfriend.animation.getByName('hurt') == 0 && !usedPractice) {
 							unlock = true;
 						}
 
